@@ -1187,13 +1187,13 @@
       integer, parameter ::   numExpFields = 7
       character*30, dimension(numExpFields), parameter :: &
         cname_exp = (/ &
-          'sst', &
-          'sss', &
-          'ssu', &
-          'ssv', &
-          'ssh', &
+          'sst ', &
+          'sss ', &
+          'ssu ', &
+          'ssv ', &
+          'ssh ', &
           'ssfi', &
-          'mlt'     /)
+          'mlt '    /)
 !
       dtime = time
       call forday(dtime,yrflag, iyear,jday,ihour)

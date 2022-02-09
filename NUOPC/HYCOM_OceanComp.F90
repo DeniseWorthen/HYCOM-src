@@ -136,7 +136,6 @@ module HYCOM_Mod
 ! espc_timer(6): Run Phase export
 #endif
   real(ESMF_KIND_R8),parameter :: fillValue = 9.99e20_ESMF_KIND_R8
-
 !===============================================================================
   contains
 !===============================================================================
@@ -209,14 +208,14 @@ module HYCOM_Mod
       defaultValue="0", convention="NUOPC", purpose="Instance", rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","bit16","maxplus"/), &
+      specialStringList=(/"min    ","max    ","bit16  ","maxplus"/), &
       specialValueList=(/0,65535,65536,131071/), rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return
     call ESMF_AttributeGet(model, name="Verbosity", value=value, &
       defaultValue="0", convention="NUOPC", purpose="Instance", rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"off","low","high","max","bit16","maxplus"/), &
+      specialStringList=(/"off    ","low    ","high   ","max    ","bit16  ","maxplus"/), &
       specialValueList=(/0,9985,32513,65535,65536,131071/), rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return
 
@@ -854,14 +853,14 @@ module HYCOM_Mod
       defaultValue="0", convention="NUOPC", purpose="Instance", rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","bit16","maxplus"/), &
+      specialStringList=(/"min    ","max    ","bit16  ","maxplus"/), &
       specialValueList=(/0,65535,65536,131071/), rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return  ! bail out
     call ESMF_AttributeGet(model, name="Verbosity", value=value, &
       defaultValue="0", convention="NUOPC", purpose="Instance", rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"off","low","high","max","bit16","maxplus"/), & 
+      specialStringList=(/"off    ","low    ","high   ","max    ","bit16  ","maxplus"/), &
       specialValueList=(/0,9985,32513,65535,65536,131071/), rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return  ! bail out
 
@@ -1367,14 +1366,14 @@ module HYCOM_Mod
       defaultValue="0", convention="NUOPC", purpose="Instance", rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return  ! bail out
     diagnostic = ESMF_UtilString2Int(value, &
-      specialStringList=(/"min","max","bit16","maxplus"/), &
+      specialStringList=(/"min    ","max    ","bit16  ","maxplus"/), &
       specialValueList=(/0,65535,65536,131071/), rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return  ! bail out
     call ESMF_AttributeGet(model, name="Verbosity", value=value, &
       defaultValue="0", convention="NUOPC", purpose="Instance", rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return  ! bail out
     verbosity = ESMF_UtilString2Int(value, &
-      specialStringList=(/"off","low","high","max","bit16","maxplus"/), &
+      specialStringList=(/"off    ","low    ","high   ","max    ","bit16  ","maxplus"/), &
       specialValueList=(/0,9985,32513,65535,65536,131071/), rc=rc)
     if (ESMF_STDERRORCHECK(rc)) return  ! bail out
 
